@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bin Wash Pros | Curbside Bin Cleaning Calgary</title>
+  <meta name="description" content="Professional curbside bin cleaning in Calgary. We sanitize, deodorize, and eliminate bacteria from your trash cans. Eco-friendly, locally owned. Book today!">
+  <meta name="keywords" content="bin cleaning Calgary, trash can sanitizing, curbside bin wash, Calgary waste management services, smelly bin solution, garbage bin cleaning Calgary, wheelie bin cleaning, bin sanitizing Calgary NW SW NE SE">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --navy-mid: #122d54;
+      --blue: #1a5fb4;
+      --sky: #3a9bd5;
+      --accent: #f5a623;
+      --green: #2ecc71;
+      --white: #ffffff;
+      --off-white: #f4f6f9;
+      --gray: #8a9bb0;
+      --light-gray: #e8edf3;
+      --text: #1c2b3a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(11, 31, 58, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid rgba(245,166,35,0.3);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .logo-wrap img {
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    nav { display: flex; align-items: center; gap: 32px; }
+
+    nav a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    .btn-book-header {
+      background: var(--accent);
+      color: var(--navy);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 10px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-book-header:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(245,166,35,0.4); }
+
+    /* Hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: var(--navy);
+      padding: 16px 24px 24px;
+      gap: 16px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .mobile-nav a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .mobile-nav .btn-book-header { text-align: center; margin-top: 8px; }
+    .mobile-nav.open { display: flex; }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('image1');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(11,31,58,0.8) 0%, rgba(26,95,180,0.3) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+      width: 100%;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 8vw, 110px);
+      line-height: 0.95;
+      color: white;
+      letter-spacing: 1px;
+      margin-bottom: 28px;
+      max-width: 820px;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      color: rgba(255,255,255,0.82);
+      max-width: 520px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      padding: 16px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(245,166,35,0.5); }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 16px 36px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 64px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .hero-stat span {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ===== SECTION COMMONS ===== */
+    section { padding: 90px 24px; }
+
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(40px, 5vw, 68px);
+      line-height: 1;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .section-title span { color: var(--blue); }
+
+    .section-sub {
+      font-size: 17px;
+      color: #4a5e75;
+      max-width: 540px;
+      line-height: 1.7;
+      margin-bottom: 56px;
+    }
+
+    /* ===== PROBLEM ===== */
+    #problem { background: var(--navy); color: white; }
+    #problem .section-label { color: var(--accent); }
+    #problem .section-title { color: white; }
+    #problem .section-title span { color: var(--accent); }
+    #problem .section-sub { color: rgba(255,255,255,0.65); }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+    }
+
+    .problem-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 32px 28px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .problem-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-4px); }
+
+    .problem-icon { font-size: 42px; margin-bottom: 16px; display: block; }
+
+    .problem-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      color: white;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .problem-card p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+    /* ===== BEFORE/AFTER ===== */
+    #before-after {
+      background: var(--off-white);
+      text-align: center;
+    }
+
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 16px;
+    }
+
+    .ba-card { border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 8px 40px rgba(0,0,0,0.12); }
+
+    .ba-card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ba-label {
+      position: absolute;
+      top: 16px; left: 16px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+      padding: 6px 18px;
+      border-radius: 4px;
+    }
+    .ba-label.before { background: #e74c3c; color: white; }
+    .ba-label.after { background: var(--green); color: white; }
+
+    /* ===== SERVICES ===== */
+    #services { background: white; }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .pricing-card {
+      border: 2px solid var(--light-gray);
+      border-radius: 16px;
+      padding: 36px 32px;
+      position: relative;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .pricing-card:hover { border-color: var(--sky); box-shadow: 0 12px 48px rgba(26,95,180,0.12); transform: translateY(-4px); }
+
+    .pricing-card.featured {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, #fff9ef 0%, #ffffff 100%);
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--accent);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .pricing-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 30px;
+      color: var(--navy);
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .pricing-card .plan-desc { font-size: 14px; color: var(--gray); margin-bottom: 24px; line-height: 1.5; }
+
+    .price-main {
+      display: flex;
+      align-items: flex-start;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+
+    .price-currency { font-size: 22px; font-weight: 600; color: var(--navy); margin-top: 8px; }
+
+    .price-amount {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 64px;
+      line-height: 1;
+      color: var(--navy);
+    }
+
+    .price-per { font-size: 13px; color: var(--gray); margin-bottom: 24px; }
+
+    .price-features { list-style: none; margin-bottom: 32px; }
+    .price-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #4a5e75;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--light-gray);
+      line-height: 1.4;
+    }
+    .price-features li:last-child { border-bottom: none; }
+    .price-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    .btn-plan {
+      display: block;
+      text-align: center;
+      background: var(--navy);
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-plan:hover { background: var(--blue); transform: translateY(-2px); }
+    .pricing-card.featured .btn-plan { background: var(--accent); color: var(--navy); }
+    .pricing-card.featured .btn-plan:hover { background: #e8961a; }
+
+    /* ===== PROCESS ===== */
+    #process {
+      background: var(--off-white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('image2');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      opacity: 0.07;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-step {
+      background: white;
+      border-radius: 16px;
+      padding: 40px 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      position: relative;
+    }
+
+    .step-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 80px;
+      color: var(--light-gray);
+      line-height: 1;
+      position: absolute;
+      top: 16px; right: 20px;
+    }
+
+    .step-icon { font-size: 36px; margin-bottom: 16px; display: block; }
+
+    .process-step h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      color: var(--navy);
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .process-step p { font-size: 15px; color: #4a5e75; line-height: 1.65; }
+
+    /* ===== WHY US ===== */
+    #why {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('image3');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.07;
+    }
+
+    #why .section-label { color: var(--accent); }
+    #why .section-title { color: white; }
+    #why .section-title span { color: var(--sky); }
+    #why .section-sub { color: rgba(255,255,255,0.6); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .why-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 36px 28px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .why-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+
+    .why-icon {
+      width: 56px; height: 56px;
+      background: var(--accent);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .why-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      color: white;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .why-card p { font-size: 15px; color: rgba(255,255,255,0.62); line-height: 1.65; }
+
+    /* ===== FAQ ===== */
+    #faq { background: white; }
+
+    .faq-list { max-width: 760px; }
+
+    .faq-item {
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+    .faq-item:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 22px 28px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .faq-arrow {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--off-white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .faq-item.open .faq-arrow { transform: rotate(180deg); background: var(--accent); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      font-size: 15px;
+      color: #4a5e75;
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; padding: 0 28px 24px; }
+
+    /* ===== CONTACT ===== */
+    #contact {
+      background: var(--off-white);
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .contact-info h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(40px, 5vw, 64px);
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .contact-info h2 span { color: var(--blue); }
+
+    .contact-info p { font-size: 16px; color: #4a5e75; line-height: 1.7; margin-bottom: 32px; }
+
+    .contact-items { display: flex; flex-direction: column; gap: 16px; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contact-item-icon {
+      width: 48px; height: 48px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .contact-item a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .contact-item a:hover { color: var(--blue); }
+    .contact-item span { display: block; font-size: 12px; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+
+    .contact-cta-box {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+    }
+
+    .contact-logo { height: 60px; margin-bottom: 24px; }
+
+    .contact-cta-box h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    .contact-cta-box p { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 28px; line-height: 1.6; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #061221;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 14px;
+    }
+    footer strong { color: rgba(255,255,255,0.8); }
+
+    /* ===== SCROLL ANIMATION ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-content { padding: 100px 20px 60px; }
+
+      .ba-grid { grid-template-columns: 1fr; }
+      .ba-card img { height: 260px; }
+
+      .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
+
+      .hero-stats { gap: 24px; }
+
+      section { padding: 64px 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-inner">
+    <a href="#hero" class="logo-wrap">
+      <img src="logo" alt="Bin Wash Pros Logo" />
+    </a>
+    <nav>
+      <a href="#problem">Why Clean?</a>
+      <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
+      <a href="#why">About Us</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.jobatorio.com" target="_blank" class="btn-book-header">Book Now</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#problem" onclick="closeMobileNav()">Why Clean?</a>
+    <a href="#services" onclick="closeMobileNav()">Services</a>
+    <a href="#process" onclick="closeMobileNav()">How It Works</a>
+    <a href="#why" onclick="closeMobileNav()">About Us</a>
+    <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+    <a href="#contact" onclick="closeMobileNav()">Contact</a>
+    <a href="https://www.jobatorio.com" target="_blank" class="btn-book-header">Book Now</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">📍 Calgary, Alberta — Local & Proud</div>
+    <h1>Your bins shouldn't introduce themselves <span>before you do.</span></h1>
+    <p class="hero-sub">Professional, eco-friendly curbside bin cleaning in Calgary. We sanitize, deodorize, and leave your bins actually clean — because your neighbours are already watching.</p>
+    <div class="hero-ctas">
+      <a href="https://www.jobatorio.com" target="_blank" class="btn-primary">Book a Wash Today</a>
+      <a href="#services" class="btn-secondary">See Pricing</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>180°F</strong><span>Hot water blast</span></div>
+      <div class="hero-stat"><strong>100%</strong><span>Eco wastewater reclaim</span></div>
+      <div class="hero-stat"><strong>YYC</strong><span>Locally owned</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEM ===== -->
+<section id="problem">
+  <div class="container">
+    <p class="section-label reveal">The Truth About Your Bins</p>
+    <h2 class="section-title reveal">Your bin is a <span>biohazard.</span><br>Let's fix that.</h2>
+    <p class="section-sub reveal">You drag it out every week and never think twice — until the smell hits you first. Calgary's freeze-thaw seasons make it even worse, trapping grime that no garden hose stands a chance against.</p>
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <span class="problem-icon">🪲</span>
+        <h3>Maggot Season</h3>
+        <p>Warm Calgary summers turn a dirty bin into a 5-star maggot resort. Once they move in, they don't leave quietly.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="problem-icon">🤢</span>
+        <h3>Foul Odours</h3>
+        <p>That smell hits you before you even open the lid. It lingers. It wafts. It follows you back inside. Your neighbours notice too.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="problem-icon">🦠</span>
+        <h3>Mold & Bacteria</h3>
+        <p>Organic waste leaves behind a bacterial film that builds up week after week — a garden hose barely scratches the surface.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="problem-icon">❄️</span>
+        <h3>Calgary's Freeze-Thaw Cycle</h3>
+        <p>Waste freezes to the bottom in winter and thaws into a soupy mess in spring. That cycle traps grime deep in every crevice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BEFORE / AFTER ===== -->
+<section id="before-after">
+  <div class="container">
+    <p class="section-label reveal">Proof Is in the Bin</p>
+    <h2 class="section-title reveal">See the <span>difference</span> for yourself.</h2>
+    <div class="ba-grid">
+      <div class="ba-card reveal">
+        <img src="before" alt="Before: dirty, stained bin" />
+        <div class="ba-label before">BEFORE</div>
+      </div>
+      <div class="ba-card reveal">
+        <img src="after" alt="After: sparkling clean bin" />
+        <div class="ba-label after">AFTER</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES / PRICING ===== -->
+<section id="services">
+  <div class="container">
+    <p class="section-label reveal">Pricing & Plans</p>
+    <h2 class="section-title reveal">Clean bins. <span>Simple pricing.</span></h2>
+    <p class="section-sub reveal">No hidden fees. No long commitments. Just fresh, sanitized bins on your curb — every single time.</p>
+
+    <div class="pricing-grid">
+
+      <!-- One-Time -->
+      <div class="pricing-card reveal">
+        <h3>Single Wash</h3>
+        <p class="plan-desc">One-time deep clean for when you need it most. No commitment, just results.</p>
+        <div class="price-main"><span class="price-currency">$</span><span class="price-amount">60</span></div>
+        <p class="price-per">for 3 bins — one-time</p>
+        <ul class="price-features">
+          <li>180°F high-pressure hot water clean</li>
+          <li>Sanitized & deodorized</li>
+          <li>All 3 standard bins included</li>
+          <li>Done right on your curb</li>
+        </ul>
+        <a href="https://www.jobatorio.com" target="_blank" class="btn-plan">Book a Single Wash</a>
+      </div>
+
+      <!-- Monthly -->
+      <div class="pricing-card reveal">
+        <h3>Monthly Plan</h3>
+        <p class="plan-desc">Stay on top of it all year round. Never deal with a stinky bin again.</p>
+        <div class="price-main"><span class="price-currency">$</span><span class="price-amount">30</span></div>
+        <p class="price-per">per month / 1 bin — +$10 each additional bin</p>
+        <ul class="price-features">
+          <li>Monthly recurring clean</li>
+          <li>Synced to your garbage day</li>
+          <li>Scale up or down anytime</li>
+          <li>Cancel with notice, no hassle</li>
+        </ul>
+        <a href="https://www.jobatorio.com" target="_blank" class="btn-plan">Start Monthly Plan</a>
+      </div>
+
+      <!-- Full Season -->
+      <div class="pricing-card featured reveal">
+        <div class="featured-badge">⭐ Best Value</div>
+        <h3>Full Season</h3>
+        <p class="plan-desc">Set it and forget it. Lock in the whole season and save — the smart choice.</p>
+        <div class="price-main"><span class="price-currency">$</span><span class="price-amount">280</span></div>
+        <p class="price-per">full season — all 3 bins</p>
+        <ul class="price-features">
+          <li>All 3 bins — $280 full season</li>
+          <li>2 bins — $220 full season</li>
+          <li>1 bin — $150 full season</li>
+          <li>Priority scheduling & reliability</li>
+          <li>Best savings vs. monthly</li>
+        </ul>
+        <a href="https://www.jobatorio.com" target="_blank" class="btn-plan">Lock In the Season</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section id="process">
+  <div class="process-bg"></div>
+  <div class="container">
+    <p class="section-label reveal">How It Works</p>
+    <h2 class="section-title reveal">Three steps to <span>fresh bins.</span></h2>
+    <p class="section-sub reveal">We made it as easy as taking your bins to the curb — which, honestly, is all you have to do.</p>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <span class="step-number">01</span>
+        <span class="step-icon">📅</span>
+        <h3>Schedule</h3>
+        <p>Pick your plan and tell us which day your bins go out. We handle the rest — no reminders needed on your end.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="step-number">02</span>
+        <span class="step-icon">🚛</span>
+        <h3>We Clean</h3>
+        <p>Our specialized truck arrives and blasts your bins with 180°F high-pressure hot water, killing bacteria and dissolving grime at the source.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="step-number">03</span>
+        <span class="step-icon">✨</span>
+        <h3>Fresh & Done</h3>
+        <p>We deodorize and return your bins to your curb — sparkling clean and ready for another week. You won't even know we were there. Except for the freshness.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section id="why">
+  <div class="why-bg"></div>
+  <div class="container">
+    <p class="section-label reveal">The Local Advantage</p>
+    <h2 class="section-title reveal">Built for <span>Calgary.</span><br>Run by Calgarians.</h2>
+    <p class="section-sub reveal">We're not a franchise. We're your neighbours — two local brothers who got tired of dirty bins and decided to do something about it.</p>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🌿</div>
+        <h3>Eco-Friendly Process</h3>
+        <p>We reclaim 100% of our wastewater so it never enters Calgary's storm drains or green spaces. Clean bins, clean city.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🏔️</div>
+        <h3>Calgary Owned & Operated</h3>
+        <p>Local brothers, local business. Every dollar you spend stays in the community. We know Calgary's seasons — and we build our service around them.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">📆</div>
+        <h3>Dependable Scheduling</h3>
+        <p>We show up on your garbage day — or the day after — so your bins are cleaned right when they're empty and accessible. No guessing, no chasing.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🔥</div>
+        <h3>Pro-Grade Equipment</h3>
+        <p>Our truck-mounted system uses 180°F pressurized hot water — the kind of clean that actually sanitizes, not just rinses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="container">
+    <p class="section-label reveal">Questions? We've Got Answers.</p>
+    <h2 class="section-title reveal">Frequently Asked <span>Questions</span></h2>
+    <div class="faq-list">
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What if my bins are still full on cleaning day?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">We clean your bins after your garbage truck empties them — so timing is already built into our process. We schedule based on your regular collection day. If your pickup is delayed for any reason, just give us a heads up and we'll adjust accordingly.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do I need to be home when you come?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">Nope! As long as your bins are at the curb after collection, we take care of everything and return them to the same spot. You don't need to be present — we'll send you a notification when the job is done.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What happens in the winter? Do you operate year-round?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">Great question for a Calgary winter. Our full season plan covers the warmer months when bacteria and odour are at their worst. For cold-weather scheduling, contact us directly — we'll let you know current availability and any seasonal adjustments to the schedule.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What areas of Calgary do you service?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">We currently serve residential areas throughout Calgary including NW, SW, NE, and SE communities. Not sure if you're in our zone? Give us a call or send us an email — we're expanding regularly and happy to check.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is the cleaning process safe for my bins?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">Absolutely. Our hot-water pressure system is specifically calibrated for standard city-issued bins — powerful enough to fully sanitize without cracking or warping the plastic. We've cleaned hundreds of bins and know exactly what works.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I add more bins to my plan later?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">Yes! Monthly plan customers can add bins at $10 each per month. For season plan customers, reach out to us and we'll sort out a prorated add-on. Flexibility is the name of the game.</div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Where does the wastewater go?
+          <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">We reclaim 100% of our wastewater on-board our truck. It never enters Calgary's storm drains or storm ponds. The water is disposed of properly at approved facilities — we take environmental responsibility seriously.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="contact-info reveal">
+        <p class="section-label">Get In Touch</p>
+        <h2>Ready for a <span>fresh start?</span></h2>
+        <p>Questions, custom quotes, or just want to know if we service your street — we're a real local team and we actually pick up. Reach out anytime.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div>
+              <span>Phone / Text</span>
+              <a href="tel:+14031234567">(403) 123-4567</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div>
+              <span>Email</span>
+              <a href="mailto:hello@binwashpros.ca">hello@binwashpros.ca</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <span>Service Area</span>
+              <a>Calgary, AB — All Quadrants</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-cta-box reveal">
+        <img src="logo" alt="Bin Wash Pros Logo" class="contact-logo" />
+        <h3>Book Your Bin Wash Online</h3>
+        <p>It takes two minutes. Pick your plan, tell us your garbage day, and we'll handle the rest — no hose required on your end.</p>
+        <a href="https://www.jobatorio.com" target="_blank" class="btn-primary" style="display:inline-block;">Schedule a Wash →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p><strong>Bin Wash Pros</strong> · Calgary, Alberta · Bin Cleaning Calgary · Trash Can Sanitizing · Curbside Bin Wash<br>
+  Calgary Waste Management Services · Smelly Bin Solution · &copy; 2025 Bin Wash Pros. All rights reserved.</p>
+</footer>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  function closeMobileNav() { mobileNav.classList.remove('open'); }
+
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+
+</body>
+</html>
