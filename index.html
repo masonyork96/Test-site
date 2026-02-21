@@ -6,329 +6,308 @@
   <title>Bin Wash Pros | Curbside Bin Cleaning Calgary</title>
   <meta name="description" content="Professional curbside bin cleaning in Calgary. We sanitize, deodorize, and eliminate bacteria from your trash cans. Eco-friendly, locally owned. Book today!">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Sora:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #080c12;
-      --bg2: #0d1520;
-      --cyan: #29c5e6;
-      --pink: #f050a0;
-      --pink-light: #ff80c8;
-      --cyan-dark: #1a8faa;
+      --bg: #f0f6ff;
       --white: #ffffff;
-      --muted: rgba(255,255,255,0.55);
-      --card: rgba(255,255,255,0.04);
-      --card-border: rgba(255,255,255,0.08);
-      --green: #00e676;
+      --blue: #2563eb;
+      --blue-light: #60a5fa;
+      --pink: #ec4899;
+      --pink-light: #f9a8d4;
+      --teal: #0d9488;
+      --navy: #0f172a;
+      --text: #334155;
+      --muted: #94a3b8;
+      --card: #ffffff;
+      --green: #10b981;
+      --border: #e2e8f0;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--white); overflow-x: hidden; }
-
-    /* NOISE OVERLAY */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      opacity: 0.3;
-    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
 
     /* HEADER */
     header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(8,12,18,0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(41,197,230,0.2);
+      background: rgba(240,246,255,0.95); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
     }
     .header-inner {
-      max-width: 1200px; margin: 0 auto; padding: 0 24px;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 84px;
+      max-width: 1200px; margin: 0 auto; padding: 0 32px;
+      display: flex; align-items: center; justify-content: space-between; height: 80px;
     }
-    .logo-wrap img { height: 78px; width: auto; object-fit: contain; }
-    nav { display: flex; align-items: center; gap: 28px; }
-    nav a {
-      color: var(--muted); text-decoration: none; font-size: 13px;
-      font-weight: 500; letter-spacing: 1px; text-transform: uppercase;
-      transition: color 0.2s;
-    }
-    nav a:hover { color: var(--cyan); }
+    .logo-wrap img { height: 70px; width: auto; object-fit: contain; }
+    nav { display: flex; align-items: center; gap: 32px; }
+    nav a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: var(--blue); }
     .btn-book-header {
-      background: linear-gradient(135deg, var(--cyan), var(--pink));
-      color: var(--bg); font-family: 'Outfit', sans-serif;
-      font-weight: 700; font-size: 13px; text-transform: uppercase;
-      letter-spacing: 1px; padding: 10px 22px; border-radius: 6px;
-      text-decoration: none; transition: opacity 0.2s, transform 0.2s;
+      background: var(--blue); color: white; font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700; font-size: 14px; padding: 10px 24px; border-radius: 100px;
+      text-decoration: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     }
-    .btn-book-header:hover { opacity: 0.88; transform: translateY(-2px); }
+    .btn-book-header:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,0.3); }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; }
-    .mobile-nav { display: none; flex-direction: column; background: var(--bg2); padding: 16px 24px 24px; gap: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
-    .mobile-nav a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .mobile-nav .btn-book-header { text-align: center; margin-top: 8px; color: var(--bg); }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); padding: 16px 32px 24px; gap: 16px; border-top: 1px solid var(--border); box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+    .mobile-nav a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .mobile-nav .btn-book-header { text-align: center; margin-top: 8px; }
     .mobile-nav.open { display: flex; }
 
     /* HERO */
     .hero {
       position: relative; min-height: 100vh;
       display: flex; align-items: center; overflow: hidden;
+      background: linear-gradient(135deg, #e0f2fe 0%, #fce7f3 50%, #e0e7ff 100%);
     }
-    .hero-bg {
+    .hero-img-bg {
       position: absolute; inset: 0;
       background-image: url('image1.jpg');
-      background-size: cover; background-position: center;
-      filter: brightness(0.22) saturate(0.6);
+      background-size: cover; background-position: center right;
+      opacity: 0.12; mix-blend-mode: multiply;
     }
-    .hero-glow-cyan {
-      position: absolute; top: -100px; left: -100px;
-      width: 600px; height: 600px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(41,197,230,0.18) 0%, transparent 70%);
-      pointer-events: none;
+    .hero-blob1 {
+      position: absolute; top: -120px; right: -80px; width: 700px; height: 700px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(96,165,250,0.25) 0%, transparent 70%);
     }
-    .hero-glow-pink {
-      position: absolute; bottom: -50px; right: 0;
-      width: 500px; height: 500px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(240,80,160,0.15) 0%, transparent 70%);
-      pointer-events: none;
+    .hero-blob2 {
+      position: absolute; bottom: -100px; left: 20%; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(236,72,153,0.15) 0%, transparent 70%);
     }
     .hero-content {
-      position: relative; z-index: 2;
-      max-width: 1200px; margin: 0 auto;
-      padding: 160px 24px 100px; width: 100%;
+      position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;
+      padding: 160px 32px 100px; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
     }
+    .hero-text {}
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
-      border: 1px solid var(--cyan); color: var(--cyan);
-      font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+      background: white; border: 1px solid var(--border); color: var(--blue);
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
       text-transform: uppercase; padding: 7px 18px; border-radius: 100px;
-      margin-bottom: 28px;
+      margin-bottom: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
-    .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); animation: pulse-dot 1.5s ease-in-out infinite; }
-    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
     .hero h1 {
-      font-family: 'Black Han Sans', sans-serif;
-      font-size: clamp(54px, 9vw, 120px);
-      line-height: 0.92; color: white; letter-spacing: -1px;
-      margin-bottom: 32px; max-width: 880px;
+      font-family: 'Sora', sans-serif; font-size: clamp(44px, 6vw, 80px);
+      line-height: 1.05; color: var(--navy); margin-bottom: 24px; font-weight: 800;
     }
-    .hero h1 .grad {
-      background: linear-gradient(90deg, var(--cyan), var(--pink));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-sub {
-      font-size: clamp(16px, 2vw, 20px); color: var(--muted);
-      max-width: 500px; line-height: 1.7; margin-bottom: 44px; font-weight: 300;
-    }
-    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero h1 span { color: var(--blue); }
+    .hero-sub { font-size: 18px; color: var(--text); line-height: 1.7; margin-bottom: 40px; font-weight: 400; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn-primary {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--cyan), var(--pink));
-      color: var(--bg); font-weight: 700; font-size: 16px;
-      letter-spacing: 0.5px; padding: 16px 40px; border-radius: 8px;
+      display: inline-block; background: var(--blue); color: white;
+      font-weight: 700; font-size: 16px; padding: 16px 36px; border-radius: 100px;
       text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
     }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(41,197,230,0.35); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(37,99,235,0.35); }
     .btn-secondary {
-      display: inline-block; background: transparent; color: white;
-      font-weight: 600; font-size: 16px; padding: 16px 36px;
-      border-radius: 8px; border: 1px solid rgba(255,255,255,0.25);
-      text-decoration: none; transition: border-color 0.2s, background 0.2s;
+      display: inline-block; background: white; color: var(--navy);
+      font-weight: 600; font-size: 16px; padding: 16px 32px; border-radius: 100px;
+      border: 1px solid var(--border); text-decoration: none; transition: box-shadow 0.2s, transform 0.2s;
     }
-    .btn-secondary:hover { border-color: var(--cyan); background: rgba(41,197,230,0.06); }
-    .hero-stats { display: flex; gap: 48px; margin-top: 72px; flex-wrap: wrap; }
-    .hero-stat strong {
-      display: block; font-family: 'Black Han Sans', sans-serif;
-      font-size: 46px; line-height: 1;
-      background: linear-gradient(90deg, var(--cyan), var(--pink));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    .btn-secondary:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); transform: translateY(-2px); }
+    .hero-image-col { position: relative; }
+    .hero-image-wrap {
+      border-radius: 28px; overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.8);
+      aspect-ratio: 4/3;
     }
-    .hero-stat span { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; }
+    .hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-float-badge {
+      position: absolute; bottom: -20px; left: -20px;
+      background: white; border-radius: 20px; padding: 18px 24px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.14);
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .hero-float-badge strong { font-family: 'Sora', sans-serif; font-size: 26px; color: var(--navy); }
+    .hero-float-badge span { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .hero-stats { display: flex; gap: 32px; margin-top: 48px; flex-wrap: wrap; }
+    .hero-stat strong { display: block; font-family: 'Sora', sans-serif; font-size: 30px; color: var(--blue); }
+    .hero-stat span { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
 
     /* SECTIONS */
-    section { padding: 96px 24px; }
+    section { padding: 96px 32px; }
     .container { max-width: 1200px; margin: 0 auto; }
-    .section-label {
-      font-size: 11px; font-weight: 700; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--cyan); margin-bottom: 12px;
-    }
-    .section-title {
-      font-family: 'Black Han Sans', sans-serif;
-      font-size: clamp(38px, 5vw, 68px); line-height: 1;
-      color: var(--white); margin-bottom: 20px;
-    }
-    .section-title .grad {
-      background: linear-gradient(90deg, var(--cyan), var(--pink));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .section-sub { font-size: 17px; color: var(--muted); max-width: 540px; line-height: 1.7; margin-bottom: 56px; font-weight: 300; }
+    .section-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+    .section-title { font-family: 'Sora', sans-serif; font-size: clamp(34px, 4.5vw, 60px); line-height: 1.1; color: var(--navy); margin-bottom: 20px; font-weight: 800; }
+    .section-title span { color: var(--blue); }
+    .section-sub { font-size: 17px; color: var(--text); max-width: 540px; line-height: 1.7; margin-bottom: 56px; }
 
     /* PROBLEM */
-    #problem { background: var(--bg2); }
-    .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+    #problem { background: var(--navy); }
+    #problem .section-label { color: var(--blue-light); }
+    #problem .section-title { color: white; }
+    #problem .section-title span { color: var(--pink-light); }
+    #problem .section-sub { color: rgba(255,255,255,0.6); }
+    .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
     .problem-card {
-      background: var(--card); border: 1px solid var(--card-border);
-      border-radius: 16px; padding: 32px 28px;
-      transition: border-color 0.3s, transform 0.3s;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px; padding: 32px 28px; transition: background 0.3s, transform 0.3s;
     }
-    .problem-card:hover { border-color: rgba(41,197,230,0.3); transform: translateY(-4px); }
-    .problem-icon { font-size: 42px; margin-bottom: 16px; display: block; }
-    .problem-card h3 { font-family: 'Black Han Sans', sans-serif; font-size: 24px; color: white; margin-bottom: 10px; }
-    .problem-card p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+    .problem-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+    .problem-icon { font-size: 40px; margin-bottom: 16px; display: block; }
+    .problem-card h3 { font-family: 'Sora', sans-serif; font-size: 20px; color: white; margin-bottom: 10px; font-weight: 700; }
+    .problem-card p { font-size: 15px; color: rgba(255,255,255,0.58); line-height: 1.65; }
 
     /* BEFORE/AFTER */
-    #before-after { background: var(--bg); text-align: center; }
+    #before-after { background: var(--white); text-align: center; }
     .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px; }
-    .ba-card { border-radius: 16px; overflow: hidden; position: relative; border: 1px solid var(--card-border); }
+    .ba-card { border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 8px 40px rgba(0,0,0,0.1); }
     .ba-card img { width: 100%; height: 360px; object-fit: cover; display: block; }
     .ba-label {
-      position: absolute; top: 16px; left: 16px;
-      font-family: 'Black Han Sans', sans-serif; font-size: 20px; letter-spacing: 1px;
-      padding: 6px 18px; border-radius: 6px;
+      position: absolute; top: 20px; left: 20px; font-family: 'Sora', sans-serif;
+      font-size: 14px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+      padding: 8px 20px; border-radius: 100px;
     }
-    .ba-label.before { background: #e74c3c; color: white; }
-    .ba-label.after { background: var(--green); color: var(--bg); }
+    .ba-label.before { background: #fee2e2; color: #dc2626; }
+    .ba-label.after { background: #d1fae5; color: #059669; }
 
     /* SERVICES */
-    #services { background: var(--bg2); }
-    #services .section-title { color: var(--white); }
+    #services { background: var(--bg); }
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
     .pricing-card {
-      border: 1px solid var(--card-border); border-radius: 20px;
-      padding: 36px 32px; position: relative; background: var(--card);
-      transition: border-color 0.3s, transform 0.3s;
+      border: 1px solid var(--border); border-radius: 24px; padding: 36px 32px;
+      position: relative; background: var(--white);
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
     }
-    .pricing-card:hover { border-color: rgba(41,197,230,0.4); transform: translateY(-4px); }
-    .pricing-card.featured { border-color: var(--pink); background: rgba(240,80,160,0.06); }
+    .pricing-card:hover { border-color: var(--blue-light); box-shadow: 0 16px 48px rgba(37,99,235,0.1); transform: translateY(-4px); }
+    .pricing-card.featured { border-color: var(--blue); background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%); }
     .featured-badge {
       position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-      background: linear-gradient(90deg, var(--cyan), var(--pink));
-      color: var(--bg); font-size: 11px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; padding: 4px 18px; border-radius: 100px; white-space: nowrap;
+      background: var(--blue); color: white; font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase; padding: 5px 18px; border-radius: 100px; white-space: nowrap;
     }
-    .pricing-card h3 { font-family: 'Black Han Sans', sans-serif; font-size: 28px; color: white; margin-bottom: 8px; }
+    .pricing-card h3 { font-family: 'Sora', sans-serif; font-size: 26px; color: var(--navy); margin-bottom: 8px; font-weight: 800; }
     .pricing-card .plan-desc { font-size: 14px; color: var(--muted); margin-bottom: 24px; line-height: 1.5; }
     .price-main { display: flex; align-items: flex-start; gap: 4px; margin-bottom: 6px; }
-    .price-currency { font-size: 22px; font-weight: 600; color: var(--cyan); margin-top: 8px; }
-    .price-amount { font-family: 'Black Han Sans', sans-serif; font-size: 64px; line-height: 1; color: white; }
+    .price-currency { font-size: 22px; font-weight: 700; color: var(--navy); margin-top: 8px; }
+    .price-amount { font-family: 'Sora', sans-serif; font-size: 64px; line-height: 1; color: var(--navy); font-weight: 800; }
     .price-per { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
     .price-features { list-style: none; margin-bottom: 32px; }
     .price-features li {
       display: flex; align-items: flex-start; gap: 10px; font-size: 14px;
-      color: var(--muted); padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.06); line-height: 1.4;
+      color: var(--text); padding: 9px 0; border-bottom: 1px solid var(--border); line-height: 1.4;
     }
     .price-features li:last-child { border-bottom: none; }
     .price-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
     .btn-plan {
-      display: block; text-align: center; background: rgba(255,255,255,0.08);
-      color: white; font-weight: 600; font-size: 15px; padding: 14px;
-      border-radius: 10px; text-decoration: none; border: 1px solid var(--card-border);
-      transition: background 0.2s, border-color 0.2s;
+      display: block; text-align: center; background: var(--bg); color: var(--navy);
+      font-weight: 700; font-size: 15px; padding: 14px; border-radius: 100px;
+      text-decoration: none; border: 1px solid var(--border); transition: background 0.2s, border-color 0.2s;
     }
-    .btn-plan:hover { background: rgba(41,197,230,0.12); border-color: var(--cyan); }
-    .pricing-card.featured .btn-plan { background: linear-gradient(135deg, var(--cyan), var(--pink)); color: var(--bg); border-color: transparent; }
-    .pricing-card.featured .btn-plan:hover { opacity: 0.88; }
+    .btn-plan:hover { background: var(--border); }
+    .pricing-card.featured .btn-plan { background: var(--blue); color: white; border-color: transparent; }
+    .pricing-card.featured .btn-plan:hover { background: #1d4ed8; }
 
     /* PROCESS */
-    #process { background: var(--bg); }
-    #process .section-title { color: var(--white); }
-    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-    .process-step {
-      background: var(--card); border: 1px solid var(--card-border);
-      border-radius: 20px; padding: 40px 32px; position: relative; overflow: hidden;
-      transition: border-color 0.3s;
+    #process {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #e0f2fe 0%, #fce7f3 100%);
     }
-    .process-step:hover { border-color: rgba(41,197,230,0.3); }
+    #process::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: url('image2.jpg');
+      background-size: cover; background-position: center;
+      opacity: 0.06; mix-blend-mode: multiply;
+    }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; position: relative; z-index: 1; }
+    .process-step {
+      background: white; border-radius: 24px; padding: 40px 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07); position: relative; overflow: hidden;
+    }
     .step-number {
-      font-family: 'Black Han Sans', sans-serif; font-size: 96px;
-      position: absolute; top: 10px; right: 16px; line-height: 1;
-      background: linear-gradient(180deg, rgba(41,197,230,0.12), transparent);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      font-family: 'Sora', sans-serif; font-size: 96px; color: var(--bg);
+      line-height: 1; position: absolute; top: 10px; right: 16px; font-weight: 800;
     }
     .step-icon { font-size: 36px; margin-bottom: 16px; display: block; }
-    .process-step h3 { font-family: 'Black Han Sans', sans-serif; font-size: 26px; color: white; margin-bottom: 10px; }
-    .process-step p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+    .process-step h3 { font-family: 'Sora', sans-serif; font-size: 24px; color: var(--navy); margin-bottom: 10px; font-weight: 800; }
+    .process-step p { font-size: 15px; color: var(--text); line-height: 1.65; }
 
     /* WHY */
-    #why { background: var(--bg2); }
-    #why .section-title { color: var(--white); }
-    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    #why {
+      position: relative; overflow: hidden;
+      background: var(--navy);
+    }
+    #why::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: url('image3.jpg');
+      background-size: cover; background-position: center; opacity: 0.07;
+    }
+    #why .section-label { color: var(--blue-light); }
+    #why .section-title { color: white; }
+    #why .section-title span { color: var(--pink-light); }
+    #why .section-sub { color: rgba(255,255,255,0.6); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; position: relative; z-index: 1; }
     .why-card {
-      background: var(--card); border: 1px solid var(--card-border);
-      border-radius: 20px; padding: 36px 28px; transition: border-color 0.3s, transform 0.3s;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px; padding: 36px 28px; transition: background 0.3s, transform 0.3s;
     }
-    .why-card:hover { border-color: rgba(240,80,160,0.35); transform: translateY(-4px); }
+    .why-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
     .why-icon {
-      width: 54px; height: 54px;
-      background: linear-gradient(135deg, var(--cyan), var(--pink));
-      border-radius: 14px; display: flex; align-items: center; justify-content: center;
-      font-size: 24px; margin-bottom: 20px;
+      width: 56px; height: 56px; background: var(--blue); border-radius: 16px;
+      display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;
     }
-    .why-card h3 { font-family: 'Black Han Sans', sans-serif; font-size: 24px; color: white; margin-bottom: 10px; }
-    .why-card p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+    .why-card h3 { font-family: 'Sora', sans-serif; font-size: 20px; color: white; margin-bottom: 10px; font-weight: 700; }
+    .why-card p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.65; }
 
     /* FAQ */
-    #faq { background: var(--bg); }
-    #faq .section-title { color: var(--white); }
+    #faq { background: var(--white); }
     .faq-list { max-width: 760px; }
-    .faq-item {
-      border: 1px solid var(--card-border); border-radius: 14px;
-      margin-bottom: 10px; overflow: hidden; transition: border-color 0.3s;
-    }
-    .faq-item.open { border-color: rgba(41,197,230,0.35); }
+    .faq-item { border: 1px solid var(--border); border-radius: 16px; margin-bottom: 10px; overflow: hidden; transition: box-shadow 0.3s, border-color 0.3s; }
+    .faq-item.open { border-color: var(--blue-light); box-shadow: 0 4px 24px rgba(37,99,235,0.1); }
     .faq-question {
-      width: 100%; background: var(--card); border: none; padding: 22px 28px;
-      text-align: left; font-family: 'Outfit', sans-serif; font-size: 16px;
-      font-weight: 600; color: white; cursor: pointer; display: flex;
-      justify-content: space-between; align-items: center; gap: 16px;
+      width: 100%; background: transparent; border: none; padding: 22px 28px;
+      text-align: left; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px;
+      font-weight: 600; color: var(--navy); cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
       transition: background 0.2s;
     }
-    .faq-question:hover { background: rgba(255,255,255,0.06); }
-    .faq-arrow { color: var(--cyan); font-size: 20px; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question:hover { background: var(--bg); }
+    .faq-arrow { color: var(--blue); font-size: 20px; transition: transform 0.3s; flex-shrink: 0; }
     .faq-item.open .faq-arrow { transform: rotate(180deg); }
     .faq-answer {
       max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s;
-      font-size: 15px; color: var(--muted); line-height: 1.7; background: rgba(255,255,255,0.02);
-      padding: 0 28px;
+      font-size: 15px; color: var(--text); line-height: 1.7; padding: 0 28px;
     }
     .faq-item.open .faq-answer { max-height: 300px; padding: 0 28px 24px; }
 
     /* CONTACT */
-    #contact { background: var(--bg2); }
-    #contact .section-title { color: var(--white); }
+    #contact { background: var(--bg); }
     .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-    .contact-info h2 { font-family: 'Black Han Sans', sans-serif; font-size: clamp(36px, 4vw, 56px); line-height: 1.05; margin-bottom: 20px; }
-    .contact-info > p { font-size: 16px; color: var(--muted); line-height: 1.7; margin-bottom: 40px; font-weight: 300; }
+    .contact-info h2 { font-family: 'Sora', sans-serif; font-size: clamp(34px, 4vw, 52px); line-height: 1.1; margin-bottom: 20px; font-weight: 800; color: var(--navy); }
+    .contact-info h2 span { color: var(--blue); }
+    .contact-info > p { font-size: 16px; color: var(--text); line-height: 1.7; margin-bottom: 40px; }
     .contact-items { display: flex; flex-direction: column; gap: 20px; }
     .contact-item { display: flex; align-items: center; gap: 16px; }
     .contact-item-icon {
-      width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
-      background: linear-gradient(135deg, var(--cyan), var(--pink));
-      display: flex; align-items: center; justify-content: center; font-size: 22px;
+      width: 52px; height: 52px; border-radius: 14px; flex-shrink: 0;
+      background: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 22px;
     }
     .contact-item span { font-size: 12px; color: var(--muted); display: block; text-transform: uppercase; letter-spacing: 1px; }
-    .contact-item a { font-size: 17px; font-weight: 600; color: white; text-decoration: none; display: block; }
-    .contact-item a:hover { color: var(--cyan); }
+    .contact-item a { font-size: 17px; font-weight: 600; color: var(--navy); text-decoration: none; display: block; }
+    .contact-item a:hover { color: var(--blue); }
     .contact-cta-box {
-      background: var(--card); border: 1px solid var(--card-border);
-      border-radius: 24px; padding: 48px 40px; text-align: center;
+      background: var(--white); border: 1px solid var(--border); border-radius: 28px;
+      padding: 48px 40px; text-align: center; box-shadow: 0 8px 40px rgba(0,0,0,0.07);
     }
     .contact-logo { height: 120px; width: auto; margin-bottom: 28px; }
-    .contact-cta-box h3 { font-family: 'Black Han Sans', sans-serif; font-size: 30px; color: white; margin-bottom: 16px; }
-    .contact-cta-box p { font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 32px; font-weight: 300; }
+    .contact-cta-box h3 { font-family: 'Sora', sans-serif; font-size: 28px; color: var(--navy); margin-bottom: 16px; font-weight: 800; }
+    .contact-cta-box p { font-size: 15px; color: var(--text); line-height: 1.7; margin-bottom: 32px; }
 
     /* FOOTER */
-    footer { background: var(--bg); border-top: 1px solid rgba(255,255,255,0.06); padding: 32px 24px; text-align: center; }
-    footer p { font-size: 13px; color: rgba(255,255,255,0.3); line-height: 1.8; }
+    footer { background: var(--navy); padding: 32px 24px; text-align: center; }
+    footer p { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.8; }
 
     /* REVEAL */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* MOBILE */
+    @media (max-width: 900px) {
+      .hero-content { grid-template-columns: 1fr; gap: 40px; }
+      .hero-image-col { display: none; }
+    }
     @media (max-width: 768px) {
       nav { display: none; }
       .hamburger { display: flex; }
@@ -339,7 +318,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="header-inner">
     <div class="logo-wrap"><img src="logo.png" alt="Bin Wash Pros"></div>
@@ -367,85 +345,69 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-glow-cyan"></div>
-  <div class="hero-glow-pink"></div>
+  <div class="hero-img-bg"></div>
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
   <div class="hero-content">
-    <div class="hero-badge">Now serving all Calgary quadrants</div>
-    <h1>CLEAN BINS.<br><span class="grad">ZERO EFFORT.</span></h1>
-    <p class="hero-sub">Calgary's professional bin washing service. We blast your bins with 180°F high-pressure hot water — sanitized, deodorized, and returned before you're home from work.</p>
-    <div class="hero-ctas">
-      <a href="https://www.jobatorio.com" target="_blank" class="btn-primary">Book a Wash →</a>
-      <a href="#services" class="btn-secondary">See Pricing</a>
+    <div class="hero-text">
+      <div class="hero-badge">🧼 Calgary's Bin Cleaning Pros</div>
+      <h1>Fresh Bins.<br><span>Zero Hassle.</span></h1>
+      <p class="hero-sub">We sync with your garbage pickup, blast your bins with 180°F hot water, then return them sparkling clean — all without you lifting a finger.</p>
+      <div class="hero-ctas">
+        <a href="https://www.jobatorio.com" target="_blank" class="btn-primary">Book a Wash →</a>
+        <a href="#services" class="btn-secondary">View Pricing</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>180°F</strong><span>Hot Pressure</span></div>
+        <div class="hero-stat"><strong>100%</strong><span>Eco Reclaim</span></div>
+        <div class="hero-stat"><strong>All 4</strong><span>Quadrants</span></div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><strong>180°F</strong><span>Hot Pressure Wash</span></div>
-      <div class="hero-stat"><strong>100%</strong><span>Wastewater Reclaimed</span></div>
-      <div class="hero-stat"><strong>4×</strong><span>Quadrants Served</span></div>
+    <div class="hero-image-col">
+      <div class="hero-image-wrap">
+        <img src="image1.jpg" alt="Bin cleaning in action">
+      </div>
+      <div class="hero-float-badge">
+        <strong>5 ★</strong>
+        <span>Local Calgary Service</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
 <section id="problem">
   <div class="container">
     <p class="section-label reveal">Why It Matters</p>
-    <h2 class="section-title reveal">Your bin is a <span class="grad">bacteria factory.</span></h2>
+    <h2 class="section-title reveal">Your bin is a <span>bacteria factory.</span></h2>
     <p class="section-sub reveal">Every week, garbage rots inside your bin. Bacteria multiply, odours build, and maggots find a home. Regular washing eliminates all of it.</p>
     <div class="problem-grid">
-      <div class="problem-card reveal">
-        <span class="problem-icon">🦠</span>
-        <h3>Harmful Bacteria</h3>
-        <p>E. coli, Salmonella, and Listeria thrive in unwashed bins — especially in Calgary summers. Our 180°F hot water destroys them on contact.</p>
-      </div>
-      <div class="problem-card reveal">
-        <span class="problem-icon">🪱</span>
-        <h3>Maggot Infestations</h3>
-        <p>One missed week in summer heat creates a maggot breeding ground. A thorough pressure wash breaks the cycle completely.</p>
-      </div>
-      <div class="problem-card reveal">
-        <span class="problem-icon">💨</span>
-        <h3>Toxic Odours</h3>
-        <p>Decomposing waste produces gases that smell terrible and attract neighbourhood pests. We deodorize every bin after washing.</p>
-      </div>
-      <div class="problem-card reveal">
-        <span class="problem-icon">🏡</span>
-        <h3>Curb Appeal</h3>
-        <p>A filthy bin says a lot about a home. A spotless bin — not much. We keep yours looking and smelling like the day you got it.</p>
-      </div>
+      <div class="problem-card reveal"><span class="problem-icon">🦠</span><h3>Harmful Bacteria</h3><p>E. coli, Salmonella, and Listeria thrive in unwashed bins — especially in Calgary summers. Our 180°F hot water destroys them on contact.</p></div>
+      <div class="problem-card reveal"><span class="problem-icon">🪱</span><h3>Maggot Infestations</h3><p>One missed week in summer heat creates a maggot breeding ground. A thorough pressure wash breaks the cycle completely.</p></div>
+      <div class="problem-card reveal"><span class="problem-icon">💨</span><h3>Toxic Odours</h3><p>Decomposing waste produces gases that smell terrible and attract neighbourhood pests. We deodorize every bin after washing.</p></div>
+      <div class="problem-card reveal"><span class="problem-icon">🏡</span><h3>Curb Appeal</h3><p>A filthy bin says a lot about a home. A spotless bin — not much. We keep yours looking and smelling like the day you got it.</p></div>
     </div>
   </div>
 </section>
 
-<!-- BEFORE/AFTER -->
 <section id="before-after">
   <div class="container">
     <p class="section-label reveal">Real Results</p>
-    <h2 class="section-title reveal">See the <span class="grad">difference.</span></h2>
-    <p class="section-sub reveal" style="margin: 0 auto 56px;">This is what our truck-mounted hot-water system does to a bin that's never been cleaned.</p>
+    <h2 class="section-title reveal">See the <span>difference.</span></h2>
+    <p class="section-sub reveal" style="margin: 0 auto 56px; text-align: center;">This is what our truck-mounted hot-water system does to a bin that's never been cleaned.</p>
     <div class="ba-grid">
-      <div class="ba-card reveal">
-        <img src="before.jpg" alt="Dirty bin before cleaning">
-        <div class="ba-label before">BEFORE</div>
-      </div>
-      <div class="ba-card reveal">
-        <img src="after.jpg" alt="Clean bin after washing">
-        <div class="ba-label after">AFTER</div>
-      </div>
+      <div class="ba-card reveal"><img src="before.jpg" alt="Dirty bin before cleaning"><div class="ba-label before">BEFORE</div></div>
+      <div class="ba-card reveal"><img src="after.jpg" alt="Clean bin after washing"><div class="ba-label after">AFTER</div></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
   <div class="container">
     <p class="section-label reveal">Pricing Plans</p>
-    <h2 class="section-title reveal">Simple. <span class="grad">Affordable.</span> Clean.</h2>
+    <h2 class="section-title reveal">Simple. <span>Affordable.</span> Clean.</h2>
     <p class="section-sub reveal">No contracts. No surprises. Just fresh bins on a schedule that works for you.</p>
     <div class="pricing-grid">
-
       <div class="pricing-card reveal">
         <h3>One-Time Wash</h3>
         <p class="plan-desc">No commitment. Just one thorough clean to see the difference for yourself.</p>
@@ -459,7 +421,6 @@
         </ul>
         <a href="https://www.jobatorio.com" target="_blank" class="btn-plan">Book a One-Time Wash</a>
       </div>
-
       <div class="pricing-card featured reveal">
         <div class="featured-badge">Most Popular</div>
         <h3>Monthly Plan</h3>
@@ -476,7 +437,6 @@
         </ul>
         <a href="https://www.jobatorio.com" target="_blank" class="btn-plan">Start Monthly Plan</a>
       </div>
-
       <div class="pricing-card reveal">
         <h3>Full Season Plan</h3>
         <p class="plan-desc">Lock in the full Calgary season for maximum savings and priority scheduling.</p>
@@ -491,76 +451,41 @@
         </ul>
         <a href="https://www.jobatorio.com" target="_blank" class="btn-plan">Lock In the Season</a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
 <section id="process">
   <div class="container">
     <p class="section-label reveal">How It Works</p>
-    <h2 class="section-title reveal">Three steps to <span class="grad">fresh bins.</span></h2>
+    <h2 class="section-title reveal">Three steps to <span>fresh bins.</span></h2>
     <p class="section-sub reveal">We made it as easy as taking your bins to the curb — which, honestly, is all you have to do.</p>
     <div class="process-steps">
-      <div class="process-step reveal">
-        <span class="step-number">01</span>
-        <span class="step-icon">📅</span>
-        <h3>Schedule</h3>
-        <p>Pick your plan and tell us which day your bins go out. We handle the rest — no reminders needed on your end.</p>
-      </div>
-      <div class="process-step reveal">
-        <span class="step-number">02</span>
-        <span class="step-icon">🚛</span>
-        <h3>We Clean</h3>
-        <p>Our specialized truck arrives and blasts your bins with 180°F high-pressure hot water, killing bacteria and dissolving grime at the source.</p>
-      </div>
-      <div class="process-step reveal">
-        <span class="step-number">03</span>
-        <span class="step-icon">✨</span>
-        <h3>Fresh & Done</h3>
-        <p>We deodorize and return your bins to your curb — sparkling clean and ready for another week. You won't even know we were there. Except for the freshness.</p>
-      </div>
+      <div class="process-step reveal"><span class="step-number">01</span><span class="step-icon">📅</span><h3>Schedule</h3><p>Pick your plan and tell us which day your bins go out. We handle the rest — no reminders needed on your end.</p></div>
+      <div class="process-step reveal"><span class="step-number">02</span><span class="step-icon">🚛</span><h3>We Clean</h3><p>Our specialized truck arrives and blasts your bins with 180°F high-pressure hot water, killing bacteria and dissolving grime at the source.</p></div>
+      <div class="process-step reveal"><span class="step-number">03</span><span class="step-icon">✨</span><h3>Fresh & Done</h3><p>We deodorize and return your bins to your curb — sparkling clean and ready for another week. You won't even know we were there. Except for the freshness.</p></div>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
 <section id="why">
   <div class="container">
     <p class="section-label reveal">The Local Advantage</p>
-    <h2 class="section-title reveal">Built for <span class="grad">Calgary.</span><br>Run by Calgarians.</h2>
+    <h2 class="section-title reveal">Built for <span>Calgary.</span><br>Run by Calgarians.</h2>
     <p class="section-sub reveal">We're not a franchise. We're your neighbours — two local brothers who got tired of dirty bins and decided to do something about it.</p>
     <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="why-icon">🌿</div>
-        <h3>Eco-Friendly Process</h3>
-        <p>We reclaim 100% of our wastewater so it never enters Calgary's storm drains or green spaces. Clean bins, clean city.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-icon">🏔️</div>
-        <h3>Calgary Owned & Operated</h3>
-        <p>Local brothers, local business. Every dollar you spend stays in the community. We know Calgary's seasons — and we build our service around them.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-icon">📆</div>
-        <h3>Dependable Scheduling</h3>
-        <p>We show up on your garbage day — or the day after — so your bins are cleaned right when they're empty and accessible. No guessing, no chasing.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-icon">🔥</div>
-        <h3>Pro-Grade Equipment</h3>
-        <p>Our truck-mounted system uses 180°F pressurized hot water — the kind of clean that actually sanitizes, not just rinses.</p>
-      </div>
+      <div class="why-card reveal"><div class="why-icon">🌿</div><h3>Eco-Friendly Process</h3><p>We reclaim 100% of our wastewater so it never enters Calgary's storm drains or green spaces. Clean bins, clean city.</p></div>
+      <div class="why-card reveal"><div class="why-icon">🏔️</div><h3>Calgary Owned & Operated</h3><p>Local brothers, local business. Every dollar you spend stays in the community. We know Calgary's seasons — and we build our service around them.</p></div>
+      <div class="why-card reveal"><div class="why-icon">📆</div><h3>Dependable Scheduling</h3><p>We show up on your garbage day — or the day after — so your bins are cleaned right when they're empty and accessible. No guessing, no chasing.</p></div>
+      <div class="why-card reveal"><div class="why-icon">🔥</div><h3>Pro-Grade Equipment</h3><p>Our truck-mounted system uses 180°F pressurized hot water — the kind of clean that actually sanitizes, not just rinses.</p></div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq">
   <div class="container">
     <p class="section-label reveal">Questions? We've Got Answers.</p>
-    <h2 class="section-title reveal">Frequently <span class="grad">Asked Questions</span></h2>
+    <h2 class="section-title reveal">Frequently <span>Asked Questions</span></h2>
     <div class="faq-list">
       <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">What if my bins are still full on cleaning day?<span class="faq-arrow">▾</span></button><div class="faq-answer">We clean your bins after your garbage truck empties them — so timing is already built into our process. We schedule based on your regular collection day. If your pickup is delayed for any reason, just give us a heads up and we'll adjust accordingly.</div></div>
       <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">Do I need to be home when you come?<span class="faq-arrow">▾</span></button><div class="faq-answer">Nope! As long as your bins are at the curb after collection, we take care of everything and return them to the same spot. You don't need to be present — we'll send you a notification when the job is done.</div></div>
@@ -572,27 +497,17 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <div class="contact-wrapper">
       <div class="contact-info reveal">
         <p class="section-label">Get In Touch</p>
-        <h2>Ready for a <span class="grad">fresh start?</span></h2>
+        <h2>Ready for a <span>fresh start?</span></h2>
         <p>Questions, custom quotes, or just want to know if we service your street — we're a real local team and we actually pick up. Reach out anytime.</p>
         <div class="contact-items">
-          <div class="contact-item">
-            <div class="contact-item-icon">📞</div>
-            <div><span>Phone / Text</span><a href="tel:+14031234567">(403) 123-4567</a></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">✉️</div>
-            <div><span>Email</span><a href="mailto:hello@binwashpros.ca">hello@binwashpros.ca</a></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">📍</div>
-            <div><span>Service Area</span><a>Calgary, AB — All Quadrants</a></div>
-          </div>
+          <div class="contact-item"><div class="contact-item-icon">📞</div><div><span>Phone / Text</span><a href="tel:+14031234567">(403) 123-4567</a></div></div>
+          <div class="contact-item"><div class="contact-item-icon">✉️</div><div><span>Email</span><a href="mailto:hello@binwashpros.ca">hello@binwashpros.ca</a></div></div>
+          <div class="contact-item"><div class="contact-item-icon">📍</div><div><span>Service Area</span><a>Calgary, AB — All Quadrants</a></div></div>
         </div>
       </div>
       <div class="contact-cta-box reveal">
@@ -615,21 +530,16 @@
   const mobileNav = document.getElementById('mobileNav');
   hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
   function closeMobileNav() { mobileNav.classList.remove('open'); }
-
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
     if (!isOpen) item.classList.add('open');
   }
-
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 80);
-        observer.unobserve(e.target);
-      }
+      if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 80); observer.unobserve(e.target); }
     });
   }, { threshold: 0.1 });
   reveals.forEach(r => observer.observe(r));
